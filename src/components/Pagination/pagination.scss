@@ -1,0 +1,91 @@
+@import "./../../utils/styling/_variables.scss";
+
+.pagination {
+  position: sticky;
+  background-color: white;
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid $dark-color-90;
+  color: $dark-color-20;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+
+  &.is-top-bottom {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &.is-top {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &.is-bottom {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .right-content {
+    position: relative;
+    bottom: 4px;
+    margin-right: 1rem;
+    top: 0px;
+  }
+  .left-content {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  button {
+    width: auto;
+    font-size: 14px;
+  }
+  .next-button {
+    height: 32px;
+    width: 32px !important;
+  }
+
+  @each $size, $value in $table-cell-sizes {
+    &.is-#{$size} {
+      height: #{$value}px;
+    }
+  }
+
+  .next-button:disabled .arrow {
+    border-color: $dark-color-60;
+  }
+
+  .arrow {
+    border: solid $dark-color-30;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    &.is-right {
+      right: 4px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    &.is-left {
+      right: 1px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+
+    &.is-up {
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+
+    &.is-down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+[
+    {
+      "id": "119845",
+      "date": "2025-06-01T07:00:00Z",
+      "transaction": "Monthly Rent",
+      "method": "BANK TRANSFER",
+      "amount": 8200.00,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": ""
+      }
+    },
+    {
+      "id": "903217",
+      "date": "2025-06-01T08:30:00Z",
+      "transaction": "Spotify Subscription",
+      "method": "VISA",
+      "amount": 169.99,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "04/27"
+      }
+    },
+    {
+      "id": "482913",
+      "date": "2025-06-02T11:15:00Z",
+      "transaction": "YouTube Premium Subscription",
+      "method": "MASTERCARD",
+      "amount": 199.99,
+      "status": "IN_PROGRESS",
+      "data": {
+        "currency": "SEK",
+        "expDate": "02/28"
+      }
+    },
+    {
+      "id": "712304",
+      "date": "2025-06-03T17:45:00Z",
+      "transaction": "Grocery Purchase - ICA",
+      "method": "VISA",
+      "amount": 678.23,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "04/27"
+      }
+    },
+    {
+      "id": "561029",
+      "date": "2025-06-04T14:10:00Z",
+      "transaction": "H&M Online Shopping Return",
+      "method": "MASTERCARD",
+      "amount": 459.49,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "02/28"
+      }
+    },
+    {
+      "id": "348901",
+      "date": "2025-06-05T06:50:00Z",
+      "transaction": "SL Travel Card Recharge",
+      "method": "VISA",
+      "amount": 970.99,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "09/25"
+      }
+    },
+    {
+      "id": "678215",
+      "date": "2025-06-06T12:20:00Z",
+      "transaction": "Mobile Top-up - Telia",
+      "method": "VISA",
+      "amount": 249.99,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "04/27"
+      }
+    },
+    {
+      "id": "223789",
+      "date": "2025-06-07T18:40:00Z",
+      "transaction": "Dining - MAX Burgers",
+      "method": "MASTERCARD",
+      "amount": 132.49,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": "02/28"
+      }
+    },
+    {
+      "id": "997431",
+      "date": "2025-06-08T10:05:00Z",
+      "transaction": "Amazon.se Order",
+      "method": "VISA",
+      "amount": 799.25,
+      "status": "IN_PROGRESS",
+      "data": {
+        "currency": "SEK",
+        "expDate": "04/27"
+      }
+    },
+    {
+      "id": "440126",
+      "date": "2025-06-09T09:25:00Z",
+      "transaction": "Electricity Bill - Vattenfall",
+      "method": "BANK TRANSFER",
+      "amount": 1123.87,
+      "status": "COMPLETED",
+      "data": {
+        "currency": "SEK",
+        "expDate": ""
+      }
+    }
+  ]
+  

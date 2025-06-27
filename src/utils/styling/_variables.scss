@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+$theme-types: dark;
+
+$dark-color-100: hsl(0, 0%, 95%);
+$dark-color-90: hsl(0, 0%, 90%);
+$dark-color-80: hsl(0, 0%, 80%);
+$dark-color-70: hsl(0, 0%, 70%);
+$dark-color-60: hsl(0, 0%, 60%);
+$dark-color-50: hsl(0, 0%, 50%);
+$dark-color-40: hsl(0, 0%, 40%);
+$dark-color-30: hsl(0, 0%, 30%);
+$dark-color-20: hsl(0, 0%, 20%);
+$dark-color-10: hsl(0, 0%, 10%);
+$dark-color: $dark-color-60;
+
+$colors: (
+  dark: $dark-color-100,
+  dark-bg: $dark-color-90,
+  dark-text: $dark-color-40,
+  dark-text-outlined: $dark-color-20,
+);
+
+$sizes: small, medium, large;
+$table-cell-sizes: (
+  small: 40,
+  medium: 48,
+  large: 56,
+);
+
+.button {
+  border: none;
+  font-size: 14px;
+  background: white;
+  color: white;
+  height: 32px;
+  padding: 0rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 18px;
+
+  &.is-rounded {
+    width: 36px;
+    border-radius: 50%;
+  }
+
+  @each $type in $theme-types {
+    &.is-#{$type} {
+      background-color: map-get($colors, $type);
+      border-color: map-get($colors, #{$type}-bg);
+      color: map-get($colors, #{$type}-text);
+      transition: all 0.25s;
+      &:hover:not(:disabled) {
+        background-color: map-get($colors, #{$type}-bg);
+      }
+      &.is-outlined {
+        color: map-get($colors, #{$type}-text);
+        border-color: transparent;
+        background-color: transparent;
+        transition: all 0.25s;
+        &:hover:not(:disabled) {
+          background-color: map-get($colors, $type);
+          color: map-get($colors, #{$type}-text-outlined);
+        }
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.has-bottom-margin {
+  margin-bottom: 1rem;
+}
+
+.has-top-margin {
+  margin-top: 1rem;
+}

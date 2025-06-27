@@ -1,0 +1,18 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "declaration": true,
+      "emitDeclarationOnly": false,
+      "declarationDir": "dist",
+      "outDir": "dist",
+      "module": "ESNext",
+      "target": "ESNext",
+      "jsx": "react-jsx",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "strict": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "src/stories"]
+  }
+  

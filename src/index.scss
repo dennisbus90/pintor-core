@@ -1,0 +1,57 @@
+#root {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.25rem 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(32, 32, 32);
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  &.is-bold {
+    font-weight: 700;
+  }
+
+  &.is-dark {
+    color: rgb(20, 20, 20);
+  }
+}
+
+p {
+  font-size: 1rem;
+  color: rgb(85, 85, 85);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1rem;
+}

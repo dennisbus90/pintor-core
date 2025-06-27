@@ -1,0 +1,48 @@
+[
+    {
+      "id": "119845",
+      "title": "Low",
+      "lowest": true,
+      "low": false,
+      "medium": true,
+      "high": false,
+      "highest": false
+    },
+    {
+      "id": "903217",
+      "title": "Low",
+      "lowest": false,
+      "low": false,
+      "medium": true,
+      "high": false,
+      "highest": true
+    },
+    {
+      "id": "482913",
+      "title": "Low",
+      "lowest": true,
+      "low": false,
+      "medium": true,
+      "high": false,
+      "highest": false
+    },
+    {
+      "id": "712304",
+      "title": "Low",
+      "lowest": false,
+      "low": false,
+      "medium": false,
+      "high": false,
+      "highest": true
+    },
+    {
+      "id": "561029",
+      "title": "Low",
+      "lowest": false,
+      "low": false,
+      "medium": true,
+      "high": true,
+      "highest": false
+    }
+  ]
+  

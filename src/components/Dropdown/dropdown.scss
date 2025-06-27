@@ -1,0 +1,54 @@
+@import "./../../utils/styling/_variables.scss";
+
+.dropdown {
+  display: contents;
+
+  button.is-active {
+    background-color: $dark-color-100 !important;
+  }
+
+  .dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #555;
+    position: relative;
+    top: 12px;
+    margin-left: 8px;
+  }
+}
+
+.dropdown-content {
+  position: absolute;
+  font-family: "Nunito Sans", sans-serif;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 4px;
+  ul {
+    position: relative;
+    z-index: 999;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      color: $dark-color-20;
+      padding: 0.5rem;
+      &:hover {
+        transition: 0.3s all;
+        background-color: $dark-color-100;
+      }
+    }
+  }
+  .overlay {
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+  }
+}
