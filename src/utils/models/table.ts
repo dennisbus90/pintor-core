@@ -25,6 +25,10 @@ export interface Table {
    */
   rows?: Row[];
   /**
+   * Classes
+   */
+  className?: string;
+  /**
    * Whether the table header is fixed and stays visible during scroll.
    */
   fixedHeader?: boolean;

@@ -1,4 +1,5 @@
 @import "./../../../utils/styling/_variables.scss";
+
 .table {
   transition: max-height 0.3s ease;
   overflow-x: scroll;
@@ -11,7 +12,7 @@
   color: $dark-color-20;
   font-family: "Nunito Sans", sans-serif;
 
-  & ~ .is-top-bottom {
+  &~.is-top-bottom {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 0px !important;
@@ -31,6 +32,7 @@
   &.has-pagination-top-bottom {
     border-top: none;
     border-radius: 0;
+
     table tr:is(:last-child) td {
       border-bottom: none;
     }
@@ -43,6 +45,7 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
+
   &.has-pagination-bottom {
     table tr:is(:last-child) td {
       border-bottom: none;
@@ -66,9 +69,11 @@
     .text-is-right {
       text-align: right;
     }
+
     .text-is-center {
       text-align: center;
     }
+
     .text-is-left {
       text-align: left;
     }
@@ -82,11 +87,13 @@
       position: relative;
       top: 12px;
       margin-left: 8px;
+
       &.is-desc {
         top: -10px;
         border-top: 0;
         border-bottom: 6px solid #555;
       }
+
       &.is-active {
         border-top-color: $dark-color-30;
       }
@@ -101,6 +108,7 @@
         position: sticky;
         background: white;
       }
+
       th {
         box-sizing: border-box;
         position: relative;
@@ -118,6 +126,7 @@
         &.is-placeholder {
           background-color: $dark-color-100;
         }
+
         &.to-column {
           &.is-left {
             &:after {
@@ -129,6 +138,7 @@
               border-right: 3px solid $dark-color-40;
             }
           }
+
           &.is-right {
             &:after {
               content: "";
@@ -151,6 +161,7 @@
             top: 0;
             z-index: 1;
             background-color: $dark-color-90;
+
             &:before {
               content: "";
               position: absolute;
@@ -163,6 +174,7 @@
             }
           }
         }
+
         .from-column {
           background-color: white;
         }
@@ -182,6 +194,7 @@
         position: sticky;
         left: 0;
         z-index: 1;
+
         &.is-active {
           background: white;
         }
@@ -189,8 +202,8 @@
 
       &.has-left-shadow {
         background-color: white;
-        transition: 0.15s background-color ease-out;
       }
+
       &.has-left-shadow::after {
         content: "";
         position: absolute;
@@ -209,6 +222,7 @@
         from {
           opacity: 0;
         }
+
         to {
           opacity: 1;
         }
@@ -219,6 +233,22 @@
       background: white;
       cursor: pointer;
 
+      &.is-child {
+        position: relative;
+        background-color: $dark-color-100;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          background: $dark-color-40;
+          ;
+        }
+      }
+
       &.is-dragging {
         position: relative;
         z-index: 999 !important;
@@ -227,6 +257,7 @@
       &:not(.is-dragging ~ .tr-hover) {
         &.tr-hover:hover {
           transition: 0.15s background-color;
+
           td {
             background: $dark-color-100;
             z-index: 1;
@@ -246,9 +277,11 @@
             background-color: $dark-color-100;
           }
         }
+
         &.is-custom-rendering {
           padding: 0;
         }
+
         &.td-hover:hover {
           background: $dark-color-100;
         }
@@ -257,6 +290,38 @@
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
+          button {
+            background-color: transparent;
+            height: 24px;
+            width: 24px;
+
+            position: relative;
+            border-radius: 12px;
+            margin: 0;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              background: $dark-color-80;
+            }
+
+            .expand-children-arrow {
+              border: solid $dark-color-30;
+              border-width: 0 3px 3px 0;
+              display: inline-block;
+              padding: 3px;
+              position: relative;
+              top: 2px;
+              transform: rotate(-135deg);
+
+              &.is-up {
+                top: -1px;
+                transform: rotate(45deg);
+              }
+
+            }
+          }
         }
       }
     }

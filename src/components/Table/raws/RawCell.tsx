@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { isExpandedCell } from "../../../utils/helpers/table";
 import type { CellSettings } from "../../../hooks/useCellRefs";
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
@@ -11,6 +11,7 @@ import type { Row } from "../../../utils/models/row";
 import type { Column } from "../../../utils/models/cell";
 import { HightlightTable } from "../../../utils/models/enums/highlightTable";
 import { pintorCheckbox } from "../../../utils/helpers/checkbox";
+import { debugColumnNotFound, debugRowChildren } from "../../../utils/helpers/debug";
 
 export interface RawCellProps extends Table {
   row?: Row;
@@ -18,14 +19,15 @@ export interface RawCellProps extends Table {
   columnIndex: number;
   column: Column;
   children?: React.ReactNode;
+  settings?: Record<string, CellSettings>;
+  isSelected?: boolean;
+  isActive?: boolean;
+  onSelectRow: (isChecked: boolean) => void;
   onDragStart?: (index: number) => void;
   onDragOver?: (index: number) => void;
   onDrop?: (index: number) => void;
-  settings?: Record<string, CellSettings>;
-  isSelected?: boolean;
-  onSelectRow: (isChecked: boolean) => void;
   onHover?: (isActive: boolean) => void;
-  isActive?: boolean;
+  onOpen?: (isOpen: boolean) => void;
 }
 
 export const RawCell = ({
@@ -41,8 +43,13 @@ export const RawCell = ({
   onSelectRow,
   onHover,
   isActive = false,
+  debug,
+  onOpen,
 }: DeepReadonly<RawCellProps>) => {
   const tdRef = React.useRef<HTMLTableCellElement>(null);
+  const [isRowOpen, setIsRowOpen] = useState(row?.isOpen || false);
+  const cellHasChildren = row?.children && row?.children.length > 0 && columnIndex === 0;
+  const cellIsCheckable = checkable && column.id === pintorCheckbox.id;
 
   if (!row) return null;
   let text;
@@ -60,6 +67,10 @@ export const RawCell = ({
     ? "has-left-shadow"
     : "";
 
+  useEffect(() => {
+    if (cellHasChildren && debug) debugRowChildren();
+  }, [debug])
+
   return (
     <td
       ref={column.isSticky ? tdRef : null}
@@ -67,13 +78,11 @@ export const RawCell = ({
       rowSpan={rowSpan}
       onMouseEnter={() => onHover && onHover(true)}
       onMouseLeave={() => onHover && onHover(false)}
-      className={`cell ${isActive ? "is-active" : ""} ${
-        column.renderCellFn ? "is-custom-rendering" : ""
-      } ${stickyStyle} ${column.isSticky ? "is-sticky" : ""} ${
-        hightlight === HightlightTable.Cell && column.id !== pintorCheckbox.id
+      className={`cell ${isActive ? "is-active" : ""} ${column.renderCellFn ? "is-custom-rendering" : ""
+        } ${stickyStyle} ${column.isSticky ? "is-sticky" : ""} ${hightlight === HightlightTable.Cell && column.id !== pintorCheckbox.id
           ? "td-hover"
           : ""
-      }`}
+        }`}
       onClick={() =>
         onCellClick &&
         onCellClick(
@@ -85,20 +94,20 @@ export const RawCell = ({
       }
     >
       <div
-        className={`cell-content text-is-${
-          column?.textAlign ? column.textAlign : TextAlign.Left
-        }`}
+        className={`cell-content text-is-${column?.textAlign ? column.textAlign : TextAlign.Left
+          }`}
       >
-        {row.children && row.children.length > 0 && columnIndex === 0 && (
+        {cellHasChildren && (
           <button
             onClick={() => {
-              //row.isOpen = !row.isOpen;
+              onOpen && onOpen(!isRowOpen)
+              setIsRowOpen(prev => !prev);
             }}
           >
-            {row.isOpen ? "x" : "v"}
+            <span className={`expand-children-arrow ${isRowOpen ? 'is-down' : 'is-up'}`} />
           </button>
         )}
-        {checkable && column.id === pintorCheckbox.id ? (
+        {cellIsCheckable && !cellHasChildren ? (
           <input
             type="checkbox"
             checked={isSelected}
