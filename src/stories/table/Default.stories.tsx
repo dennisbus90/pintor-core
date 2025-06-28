@@ -3,7 +3,6 @@ import { Portal } from "../helpers/Portal";
 import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
 import PinTable from "../../components/Table";
-import React from "react";
 
 const meta = {
   title: "Components/Table",

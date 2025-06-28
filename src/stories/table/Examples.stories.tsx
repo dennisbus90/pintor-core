@@ -6,8 +6,6 @@ import { multiplicationData } from "../helpers/columns-rows/multiplicationColumn
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
 import { LoadingRowsPosition } from "../../utils/models/enums/loadingRowsPosition";
 import PinTable from "../../components/Table";
-import { PaginationAlign } from "../../utils/models/pagination";
-import React from "react";
 
 const meta = {
   title: "Components/Table/Examples",

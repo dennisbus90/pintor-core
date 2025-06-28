@@ -1,5 +1,5 @@
 import React from "react";
-import type { ColumnProps } from "../../../utils/models/cell";
+import type { Column } from "../../../utils/models/cell";
 import rows from "./dummy-data/multiplication.json";
 
 const cellWidth = 54;
@@ -34,7 +34,7 @@ function renderCell(value: string) {
   );
 }
 
-const columns: ColumnProps[] = [
+const columns: Column[] = [
   {
     id: "id",
     name: "id",

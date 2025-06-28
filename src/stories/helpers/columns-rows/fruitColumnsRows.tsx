@@ -1,5 +1,5 @@
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
-import rows from "../../../dummy-food.json";
+import rows from "./../../helpers/mockdata/dummy-food.json"
 import { DefaultCell } from "../../../components/Table/renders/DefaultCell";
 import { Column } from "../../../utils/models/cell";
 
