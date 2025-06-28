@@ -10,7 +10,6 @@ import type { Row } from "../../utils/models/row";
 import { PaginationAlign } from "../../utils/models/pagination";
 import PinTable from "../../components/Table";
 import { hasValuesAtIndexes } from "../../utils/helpers/rows";
-import React from "react";
 
 const meta = {
   title: "Components/Table/Actions",
@@ -163,7 +162,7 @@ export const Pagination: Story = {
       pageSizes: [5, 10, 15],
       paginationAlign: PaginationAlign.TOP_BOTTOM,
       total: 13,
-      onPageChange: () => {},
+      onPageChange: () => { },
       autoRefreshMs: 10000,
     },
     columns: fruitData.columns,

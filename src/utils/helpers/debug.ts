@@ -27,3 +27,11 @@ export const debugColumnNotFound = (columnId: string) => {
   };
   console.warn(PintorTile, error, error.text);
 };
+
+export const debugRowChildren = () => {
+  const error = {
+    type: TableErrorType.COLUMN,
+    text: `List rows children is not yet implemented. Please check release notes.`,
+  };
+  console.error(PintorTile, error, error.text);
+};

@@ -187,7 +187,7 @@ export const RawTable = ({
             rows={tableRows}
             checkable={checkable}
             lazyLoad={lazyLoad}
-            isSelected={selectedRows.some((rowId) => rowId === row.id)}
+            selectedRows={selectedRows}
             row={row as DeepMutable<typeof row>}
             rowIndex={rowIndex}
             onCellClick={(value, column, columnIndex, rowIndex) =>
@@ -198,12 +198,12 @@ export const RawTable = ({
             draggableRows={draggableRows}
             onRowClick={(row, index) => onRowClick && onRowClick(row, index)}
             cellSettings={cellSettings}
-            onSelectRow={(_) => {
+            onSelectRow={(selectedRow) => {
               setSelectedRows((prevSelectedRows) => {
-                const isSelected = prevSelectedRows.includes(row.id as string);
+                const isSelected = prevSelectedRows.includes(selectedRow.id as string);
                 const updatedRows = isSelected
-                  ? prevSelectedRows.filter((id) => id !== row.id)
-                  : [...prevSelectedRows, row.id as string];
+                  ? prevSelectedRows.filter((id) => id !== selectedRow.id)
+                  : [...prevSelectedRows, selectedRow.id as string];
 
                 const hasIdError = updatedRows.some((id) => !id);
                 if (hasIdError) {
@@ -225,6 +225,7 @@ export const RawTable = ({
       cellSettings,
       incomingRowsIsLoading,
       matrix,
+      selectedRows
     ]
   );
 
@@ -240,9 +241,8 @@ export const RawTable = ({
   return (
     <>
       <div
-        className={`table ${paginationStyle} ${
-          isBordered ? "is-bordered" : ""
-        }`}
+        className={`table ${paginationStyle} ${isBordered ? "is-bordered" : ""
+          }`}
         draggable="false"
         ref={tableRef}
       >

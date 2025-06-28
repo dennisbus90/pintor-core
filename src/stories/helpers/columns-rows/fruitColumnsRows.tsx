@@ -1,11 +1,10 @@
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
 import rows from "../../../dummy-food.json";
-
-import React from "react";
 import { DefaultCell } from "../../../components/Table/renders/DefaultCell";
-import { ColumnProps } from "../../../utils/models/cell";
+import { Column } from "../../../utils/models/cell";
 
-const columns: ColumnProps[] = [
+
+const columns: Column[] = [
   {
     id: "id",
     name: "id",
