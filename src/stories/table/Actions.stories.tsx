@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import rows from "../../dummy-food.json";
 import { generateRandomNrBetween } from "../../utils/helpers/general";
 import { Portal } from "../helpers/Portal";
 import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";
@@ -100,7 +99,7 @@ const meta = {
     };
 
     const [tempRows, setTempRows] = useState<Row<TransactionData>[]>(
-      rows.slice(0, 5)
+      fruitData.rows.slice(0, 5)
     );
 
     return (

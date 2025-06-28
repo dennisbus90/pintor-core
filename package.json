@@ -1,8 +1,10 @@
 {
   "name": "pintor-core",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "Core functionality for the Pintor UI library.",
+  "author": "Dennis Bus <dennisbus90@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -51,6 +53,9 @@
   "main": "./dist/pintor-core.cjs.js",
   "module": "./dist/pintor-core.es.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "./dist/pintor-core.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -58,6 +63,10 @@
       "require": "./dist/pintor-core.cjs.js"
     },
     "./pintor-core.css": "./dist/pintor-core.css"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
   },
   "files": [
     "dist"

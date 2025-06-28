@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useState } from "react";
-import rows from "../../dummy-food.json";
+import rows from "./../helpers/mockdata/dummy-food.json"
 import { generateRandomNrBetween } from "../../utils/helpers/general";
 import { Portal } from "../helpers/Portal";
 import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";

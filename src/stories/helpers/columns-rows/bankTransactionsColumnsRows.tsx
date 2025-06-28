@@ -1,6 +1,6 @@
 import React from "react";
 import { DefaultCell } from "../../../components/Table/renders/DefaultCell";
-import type { ColumnProps } from "../../../utils/models/cell";
+import type { Column } from "../../../utils/models/cell";
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
 import type { Row } from "../../../utils/models/row";
 import TimestampDate from "../../components/Date/Date";
@@ -8,7 +8,7 @@ import Tag from "../../components/Tag/Tag";
 import { formatNumber } from "../formatNumbers";
 import rows from "./dummy-data/transactions.json";
 
-const columns: ColumnProps[] = [
+const columns: Column[] = [
   {
     id: "id",
     name: "id",
