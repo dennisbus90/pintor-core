@@ -1,16 +1,11 @@
 import React from "react";
 import "./grid.scss";
 import PinColumn from "./Column";
+import { GridRow } from "../../utils/models/grid";
 
-type PinColumnInjectedProps = Pick<PinRowProps, "gap" | "debug">;
+type PinColumnInjectedProps = Pick<GridRow, "gap" | "debug">;
 
-interface PinRowProps {
-    children: React.ReactNode;
-    gap?: number;
-    debug?: boolean;
-}
-
-function PinRow({ children, gap = 16, debug = false }: PinRowProps) {
+function PinRow({ children, gap = 16, debug = false }: GridRow) {
     const halfGap = gap / 2;
     const modifiedChildren = React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === PinColumn) {

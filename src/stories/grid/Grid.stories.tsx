@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import PinRow from "../../public-components/grid/Row";
 import PinColumn from "../../public-components/grid/Column";
 import { gridConfig } from "../config/gridConfig";
-import PintorProvider from "../../context/PintorProvider";
+import PinProvider from "../../context/PinProvider";
 import "./grid.scss"
 
 const meta = {
@@ -35,7 +35,7 @@ const meta = {
           </PinRow>
         </div>
 
-        <PintorProvider grid={{
+        <PinProvider grid={{
           maxSizeColumns: 12,
           breakpoints: {
             sm: 410,
@@ -66,7 +66,7 @@ const meta = {
               <PinColumn><div className="column">Auto</div></PinColumn>
             </PinRow>
           </div>
-        </PintorProvider ></>
+        </PinProvider ></>
     );
   },
 

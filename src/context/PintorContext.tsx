@@ -1,7 +1,7 @@
 import React from 'react';
-import { PintorProvider } from './PintorProvider';
+import { PinProvider } from './PinProvider';
 
-export const PintorContext = React.createContext<PintorProvider>({
+export const PintorContext = React.createContext<PinProvider>({
     grid: {
         maxSizeColumns: 12,
         breakpoints: {

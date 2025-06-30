@@ -2,17 +2,7 @@ import "./grid.scss";
 import React, { useContext, useMemo, useState } from 'react';
 import { PintorContext } from "../../context/PintorContext";
 import { debugGridColumnId } from "../../utils/helpers/debug";
-import { ColumnSize } from "../../utils/models/grid";
-
-interface PinColumnProps {
-    id?: string;
-    gap?: number;
-    size?: Record<string, number>;
-    offset?: Record<string, number>;
-    debug?: boolean;
-    fit?: boolean;
-    children?: React.ReactNode;
-}
+import { ColumnSize, GridColumn } from "../../utils/models/grid";
 
 function PinColumn({
     id,
@@ -22,7 +12,7 @@ function PinColumn({
     debug = false,
     gap = 0,
     fit,
-}: PinColumnProps) {
+}: GridColumn) {
     const { grid } = useContext(PintorContext);
     const [columnId, _] = useState<string>(id ? id : crypto.randomUUID())
 
