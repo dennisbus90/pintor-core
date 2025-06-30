@@ -19,7 +19,7 @@ function PinColumn({
     if (!grid) return null;
 
     const sortedBreakpoints = useMemo(
-        () => Object.entries(grid.breakpoints).sort((a, b) => a[1] - b[1]),
+        () => Object.entries(grid.breakpoints).sort((a, b) => a[1] as number - b[1] as number),
         [grid.breakpoints]
     );
     const lowestBreakpoint = sortedBreakpoints[0][0];
