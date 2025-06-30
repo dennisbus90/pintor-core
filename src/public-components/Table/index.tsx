@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { RawTable } from "./raws/RawTable";
-import { RawPagination } from "../Pagination/RawPagination";
 import type { Table } from "../../utils/models/table";
 import type { DeepReadonly } from "../../utils/helpers/typescript";
 import {
@@ -8,6 +7,7 @@ import {
   type Paginate,
   type PinPagination,
 } from "../../utils/models/pagination";
+import { RawPagination } from "../../components/Pagination/RawPagination";
 
 interface PinTableProps extends Table {
   pagination?: PinPagination;

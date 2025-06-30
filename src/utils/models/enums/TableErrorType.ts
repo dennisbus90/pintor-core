@@ -4,3 +4,7 @@ export enum TableErrorType {
   COLUMN = "Column",
   ROW = "Row",
 }
+
+export enum GridErrorType {
+  COLUMN = "Column",
+}

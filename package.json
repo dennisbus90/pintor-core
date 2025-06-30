@@ -1,10 +1,15 @@
 {
   "name": "pintor-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "description": "Core functionality for the Pintor UI library.",
+  "description": "Use React components with ease.",
   "author": "Dennis Bus <dennisbus90@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dennisbus90/pintor-core"
+  },
+  "homepage": "https://pintor.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -70,5 +75,13 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "ui",
+    "design-system",
+    "react",
+    "components",
+    "table",
+    "grid"
   ]
 }

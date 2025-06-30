@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Portal } from "../helpers/Portal";
 import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
-import PinTable from "../../components/Table";
+import PinTable from "../../public-components/Table";
 
 const meta = {
   title: "Components/Table",

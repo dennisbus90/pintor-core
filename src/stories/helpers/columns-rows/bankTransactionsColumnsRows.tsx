@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultCell } from "../../../components/Table/renders/DefaultCell";
+import { DefaultCell } from "../../../public-components/Table/renders/DefaultCell";
 import type { Column } from "../../../utils/models/cell";
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
 import type { Row } from "../../../utils/models/row";

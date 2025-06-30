@@ -39,29 +39,33 @@ import "pintor-core/pintor-core.css";
 <h3 align="center">How to use</h3>
 
 ```js
-import { PinTable } from "pintor-table";
+import { PinTable } from "pintor-core";
 
 <PinTable rows={rows} columns={columns} ... />
 ```
 
-<br />
+```js
+import { PinRow, PinColumn } from "pintor-core";
 
----
+<PinRow>
+    <PinColumn>Hello World<PinColumn>
+    <PinColumn>Hola Mundo<PinColumn>
+</PinRow>
+```
 
-<br />
 
 ## Expanding Pintor
 
 Currently, one preview component is available:
 
 - PinTable - A flexible, animated table component that uses Motion [Motion](https://https://motion.dev/) for smooth and complex animations.
+- PinRow & PinColumn (Utility) — A simple, flexible way to implement grid systems in your projects — built to integrate seamlessly with Pintor components.
 
 ### Future to come
 
 As Pintor evolves, more complex components are on the way. Expect new additions and improvements to existing ones as the library grows.
 
-Upcoming components and utilities:
+Upcoming components:
 
-- PinGrid (Utility) — A simple, flexible way to implement grid systems in your projects — built to integrate seamlessly with Pintor components.
 - PinDateDiagram (Component) — An interactive, selectable date diagram powered by [D3](https://https://d3js.org/). perfect for visualizing date ranges and timelines.
-- PinList [Component] — A highly customizable list component — minimal by default, but easily extensible.
+- PinList (Component) — A highly customizable list component — minimal by default, but easily extensible.

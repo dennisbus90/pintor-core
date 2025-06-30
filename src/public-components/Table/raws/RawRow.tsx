@@ -1,7 +1,6 @@
 import React, {
   Fragment,
   forwardRef,
-  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -15,7 +14,6 @@ import type { Row } from "../../../utils/models/row";
 import type { Column } from "../../../utils/models/cell";
 import { HightlightTable } from "../../../utils/models/enums/highlightTable";
 import { debugColumnNotFound } from "../../../utils/helpers/debug";
-import { clone } from "../../../utils/helpers/general";
 
 interface RawRowProps extends Table {
   row: Row;
