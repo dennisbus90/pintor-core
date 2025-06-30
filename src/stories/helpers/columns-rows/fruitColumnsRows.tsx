@@ -1,7 +1,7 @@
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
 import rows from "./../../helpers/mockdata/dummy-food.json"
-import { DefaultCell } from "../../../components/Table/renders/DefaultCell";
 import { Column } from "../../../utils/models/cell";
+import { DefaultCell } from "../../../public-components/Table/renders/DefaultCell";
 
 
 const columns: Column[] = [

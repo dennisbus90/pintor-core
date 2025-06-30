@@ -7,7 +7,7 @@ import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";
 import { type TransactionData } from "../helpers/columns-rows/bankTransactionsColumnsRows";
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
 import type { Row } from "../../utils/models/row";
-import PinTable from "../../components/Table";
+import PinTable from "../../public-components/Table";
 
 const meta = {
   title: "Components/Table/Actions",

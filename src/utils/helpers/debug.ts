@@ -1,5 +1,5 @@
 import { PintorTile } from "../../pintor.config";
-import { TableErrorType } from "../models/enums/TableErrorType";
+import { GridErrorType, TableErrorType } from "../models/enums/TableErrorType";
 
 export const debugPaginationRangeNotFound = (
   fromIndex: number,
@@ -32,6 +32,14 @@ export const debugRowChildren = () => {
   const error = {
     type: TableErrorType.COLUMN,
     text: `List rows children is not yet implemented. Please check release notes.`,
+  };
+  console.error(PintorTile, error, error.text);
+};
+
+export const debugGridColumnId = () => {
+  const error = {
+    type: GridErrorType.COLUMN,
+    text: `Offset requires all Column components to have a ID.`,
   };
   console.error(PintorTile, error, error.text);
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { isExpandedCell } from "../../../utils/helpers/table";
 import type { CellSettings } from "../../../hooks/useCellRefs";
 import { TextAlign } from "../../../utils/models/enums/TextAlign";
@@ -11,7 +11,6 @@ import type { Row } from "../../../utils/models/row";
 import type { Column } from "../../../utils/models/cell";
 import { HightlightTable } from "../../../utils/models/enums/highlightTable";
 import { pintorCheckbox } from "../../../utils/helpers/checkbox";
-import { debugColumnNotFound, debugRowChildren } from "../../../utils/helpers/debug";
 
 export interface RawCellProps extends Table {
   row?: Row;
@@ -66,10 +65,6 @@ export const RawCell = ({
   const stickyStyle = settings?.[column.id]?.isStickyActive
     ? "has-left-shadow"
     : "";
-
-  useEffect(() => {
-    if (cellHasChildren && debug) debugRowChildren();
-  }, [debug])
 
   return (
     <td

@@ -3,7 +3,7 @@ import { Portal } from "../helpers/Portal";
 import { fruitData } from "../helpers/columns-rows/fruitColumnsRows";
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
 import { LoadingRowsPosition } from "../../utils/models/enums/loadingRowsPosition";
-import PinTable from "../../components/Table";
+import PinTable from "../../public-components/Table";
 
 const meta = {
   title: "Components/Table/States",

@@ -1,4 +1,3 @@
-import React from "react";
 import type { Column } from "../../../utils/models/cell";
 import rows from "./dummy-data/multiplication.json";
 

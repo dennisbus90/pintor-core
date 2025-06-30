@@ -7,7 +7,7 @@ import { type TransactionData } from "../helpers/columns-rows/bankTransactionsCo
 import { tableConfig, tableDefaultParams } from "../config/tableConfig";
 import type { Row } from "../../utils/models/row";
 import { PaginationAlign } from "../../utils/models/pagination";
-import PinTable from "../../components/Table";
+import PinTable from "../../public-components/Table";
 import { hasValuesAtIndexes } from "../../utils/helpers/rows";
 
 const meta = {
