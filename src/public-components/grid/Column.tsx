@@ -31,7 +31,7 @@ function PinColumn({
     );
 
     const offsetClasses = Object.keys(offset).map(key => `has-offset-${key}-${columnId}`);
-    const className = ['column', `is-${columnId}`, ...offsetClasses].join(' ');
+    const className = ['p-column', `is-${columnId}`, ...offsetClasses].join(' ');
 
     const mediaStyles = useMemo(() => {
         return Object.entries(transformed).map(([key, colSpan]) => {
@@ -58,7 +58,7 @@ function PinColumn({
     return (
         <>
             <style>{mediaStyles.join('\n')}</style>
-            <div id={columnId} className={className} style={{ flex: fit ? 'none' : '', margin: `${(gap ? gap : grid.gap) / 2}px` }}>
+            <div id={columnId} className={className} style={{ flex: fit ? 'none' : '', padding: `${(gap ? gap : grid.gap) / 2}px` }}>
                 {children}
             </div >
         </>

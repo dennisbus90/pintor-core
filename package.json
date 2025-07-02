@@ -1,6 +1,6 @@
 {
   "name": "pintor-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Use React components with ease.",
   "author": "Dennis Bus <dennisbus90@gmail.com>",

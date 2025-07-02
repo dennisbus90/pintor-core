@@ -6,7 +6,6 @@ import { GridRow } from "../../utils/models/grid";
 type PinColumnInjectedProps = Pick<GridRow, "gap" | "debug">;
 
 function PinRow({ children, gap = 16, debug = false }: GridRow) {
-    const halfGap = gap / 2;
     const modifiedChildren = React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === PinColumn) {
             return React.cloneElement(child as React.ReactElement<PinColumnInjectedProps>, {
@@ -17,7 +16,7 @@ function PinRow({ children, gap = 16, debug = false }: GridRow) {
         return child;
     });
 
-    return <div className="grid" style={{ marginInlineStart: gap ? `calc(-${halfGap}px)` : "0px" }}>{modifiedChildren}</div>;
+    return <div className="p-grid" style={{ marginInlineStart: gap ? `-${gap / 2}px` : "0px", width: gap ? `calc(100% + ${gap}px)` : "100%" }}>{modifiedChildren}</div>;
 }
 
 export default PinRow;
