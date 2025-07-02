@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">🎨 Pintor UI Design Library</h1>
-<a href="https://bulma.io"><img src="https://raw.githubusercontent.com/dennisbus90/pintor-core/refs/heads/main/public/pintor-library_2x.png" alt="Pintor: React UI Library" style="max-width:100%;" width="600"></a>
+<a href="https://pintor.io"><img src="https://raw.githubusercontent.com/dennisbus90/pintor-core/refs/heads/main/public/pintor-library_2x.png" alt="Pintor: React UI Library" style="max-width:100%;" width="600"></a>
 
 </div>
 

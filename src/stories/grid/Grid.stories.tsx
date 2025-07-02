@@ -12,8 +12,8 @@ const meta = {
       <>
         <div style={{ width: 800 }}>
           <h1>Grid</h1>
-          <PinRow>
-            <PinColumn size={{
+          <PinRow gap={32}>
+            <PinColumn offset={{ widescreen: 3, fullhd: 3 }} size={{
               mobile: 3,
               tablet: 12,
               desktop: 6,
